@@ -1,0 +1,102 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin: auto;
+    background: white;
+    padding: 10px;
+}
+
+.logo img {
+    width: 100px;
+    height: 40px;
+    background-repeat: no-repeat;
+}
+
+.middle {
+    display: flex;
+}
+
+.middle p {
+    margin: 15px;
+}
+
+
+
+.right img {
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.banner {
+    background-image: url(../img/promo.png);
+    width: 100vw;
+    height: 50vh;
+    background-repeat: no-repeat;
+}
+
+.banner_content {
+    position: absolute;
+    text-align: center;
+    color: white;
+
+    top: 40%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    margin: 0;
+}
+
+.banner_content p{
+    margin-top: 30px;
+}
+
+.banner_btn{
+    padding: 12px 50px;
+    margin-top: 80px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.banner_btn:hover{
+    background-color:  rgb(51, 164, 213);
+}
+
+.ads_head{
+    text-align: center;
+    padding: 10px;
+}
+
+.ads_img{
+    display: flex;
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 5px;
+}
+
+.ads_img img{
+    width: 50%;
+}
+
+.carousel_head{
+    text-align: center;
+}
+
+
+

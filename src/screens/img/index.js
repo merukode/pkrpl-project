@@ -1,0 +1,5 @@
+export {default as ads} from './ads.png'
+export {default as logo} from './Group.png'
+export {default as gambar} from './shop-banner.jpg'
+export {default as profile} from './profile.png'
+export {default as ads2} from './ads2.png'
