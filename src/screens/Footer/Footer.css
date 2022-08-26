@@ -1,0 +1,19 @@
+.footer{
+    width: 100vw;
+    height: 30vh;
+    background-color: gray;
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.brand{
+    margin-top: 15px;
+    color: white;
+    width: 40%;
+}
+
+.brand p{
+    margin-top: 15px;
+}

@@ -3,6 +3,8 @@ import styles from './Home.module.css'
 import { Link } from "react-router-dom";
 import {ads, logo, gambar, profile, ads2} from '../img'
 import {Box, Paper, Grid} from '@mui/material'
+import Sliders from '../Slider/Slider'
+import Footer from '../Footer/Footer'
 
 function Home() {
   return (
@@ -13,7 +15,7 @@ function Home() {
         </div>
 
         <div className={styles.middle}>
-          <Link to=""><p>About</p></Link>
+          <Link to="/store"><p>About</p></Link>
           <p>Contact</p>
           <p >Store</p>
         </div>
@@ -44,14 +46,12 @@ function Home() {
         </div>
       </div>
 
-      <div className={styles.carousel}>
-        <div className={styles.carousel_head}>
-          <h1>Judul</h1>
-          <p>This is an carousel page</p>
-        </div>
-        
-      </div>
+      <Sliders/>
+      <Sliders/>
+      <Footer/>
+
     </div>
+    
   );
 }
 
