@@ -1,6 +1,9 @@
 import React from "react";
 import "./Footer.css";
 import { whiteLogo } from "../img";
+import {Facebook as FacebookIcon, Twitter as TwitterIcon, WhatsApp as WhatsAppIcon, Phone as PhoneIcon } from '@mui/icons-material/';
+
+
 
 export default function () {
   return (
@@ -45,36 +48,19 @@ export default function () {
             </ul>
           </div>
           <div class="footer-col">
-            <h4>online shop</h4>
-            <ul>
-              <li>
-                <a href="#">watch</a>
-              </li>
-              <li>
-                <a href="#">bag</a>
-              </li>
-              <li>
-                <a href="#">shoes</a>
-              </li>
-              <li>
-                <a href="#">dress</a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-col">
             <h4>follow us</h4>
             <div class="social-links">
               <a href="#">
-                <i class="fab fa-facebook-f"></i>
+                <FacebookIcon/>
               </a>
               <a href="#">
-                <i class="fab fa-twitter"></i>
+                <TwitterIcon/>
               </a>
               <a href="#">
-                <i class="fab fa-instagram"></i>
+                <WhatsAppIcon/>
               </a>
               <a href="#">
-                <i class="fab fa-linkedin-in"></i>
+                <PhoneIcon/>
               </a>
             </div>
           </div>
