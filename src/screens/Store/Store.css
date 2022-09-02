@@ -43,6 +43,10 @@ body{
     margin-left: 5px;
     cursor: pointer;
 }
+.middle p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
 
 /* End Navbar */
 
@@ -52,6 +56,10 @@ body{
     text-align: center;
     margin-top: 5em;
     
+}
+
+input{
+    padding: 5px;
 }
 
 

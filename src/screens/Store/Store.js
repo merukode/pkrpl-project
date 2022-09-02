@@ -1,4 +1,3 @@
-import { Search } from "@mui/icons-material";
 import React from "react";
 import { logo, profile, search } from "../img/index";
 import "./Store.css";
@@ -17,7 +16,7 @@ export default function Store() {
         </div>
 
         <div className="right">
-          <input type="search" placeholder={search}/>
+          <input type="search" placeholder="Search"/>
           <img src={profile} />
         </div>
       </div>
