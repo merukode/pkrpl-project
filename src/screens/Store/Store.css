@@ -58,8 +58,36 @@ body{
     
 }
 
-input{
-    padding: 5px;
+.main-products input{
+    display: relative;
+    left: 50%;
+}
+
+
+.products{
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.box{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  width: 20%;
+  border: 1px solid black;
+  margin: 12px;
+  padding-bottom: 20px;
+}
+
+
+.box img{
+    width: 70%;
 }
 
 

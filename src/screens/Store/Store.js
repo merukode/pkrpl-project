@@ -1,6 +1,9 @@
 import React from "react";
 import { logo, profile, search } from "../img/index";
-import "./Store.css";
+import "./store.css";
+import { Link } from "react-router-dom";
+import Content from '../content.json'
+import Footer from '../Footer/Footer'
 
 export default function Store() {
   return (
@@ -10,13 +13,15 @@ export default function Store() {
         <img src={logo} />
 
         <div className="middle">
+          <Link to="/">
           <p>Home</p>
+          </Link>
           <p>Store</p>
           <p>All Products</p>
         </div>
 
         <div className="right">
-          <input type="search" placeholder="Search"/>
+          
           <img src={profile} />
         </div>
       </div>
@@ -30,7 +35,30 @@ export default function Store() {
         <p>Semua produk disini sudah terverifikasi oleh ahlinya</p>
       </div>
 
+      
+
+      <div className="main-products">
+      {/* <input type="search" placeholder="Search"/> */}
+      <div className="products">
+        {
+          Content.map(content => {
+            return(
+              <div className="box">
+                <img src={content.Img}/>
+                <p>{content.Title}</p>
+                <p>{content.Price}</p>
+              </div>
+            )
+          })
+        }
+      </div>
+      </div>
+
       {/* End Content */}
+
+      {/* Footer */}
+      <Footer/>
+      {/* End Footer */}
     </>
   );
 }

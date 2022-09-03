@@ -14,11 +14,11 @@ function Home() {
         </div>
 
         <div className={styles.middle}>
-          <Link to="/store">
-            <p>About</p>
-          </Link>
+          <p>About</p>
           <p>Contact</p>
+          <Link to="/store">
           <p>Store</p>
+          </Link>
         </div>
 
         <div className={styles.right}>
