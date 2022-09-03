@@ -4,7 +4,7 @@ import "./store.css";
 import { Link } from "react-router-dom";
 import Content from '../content.json'
 import Footer from '../Footer/Footer'
-import { TextField, Autocomplete, createFilterOptions } from "@mui/material";
+import { TextField, Autocomplete, createFilterOptions} from "@mui/material";
 
 export default function Store() {
   const filterOptions = createFilterOptions({
