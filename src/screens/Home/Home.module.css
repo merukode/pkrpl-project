@@ -29,10 +29,16 @@ body{
 
 .middle {
     display: flex;
+    color: black;
 }
 
 .middle p {
     margin: 15px;
+    color: black;
+}
+
+.middle p:hover{
+    text-decoration: underline;
 }
 
 
@@ -49,13 +55,13 @@ body{
     width: 100vw;
     height: 50vh;
     background-repeat: no-repeat;
+    color: white;
 }
 
 .banner_content {
     position: absolute;
     text-align: center;
     color: white;
-
     top: 40%;
 
     left: 50%;
@@ -67,6 +73,11 @@ body{
 
 .banner_content p{
     margin-top: 30px;
+    color: white;
+}
+
+.banner_content h1{
+    color: white;
 }
 
 .banner_btn{

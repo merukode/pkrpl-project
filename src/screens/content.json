@@ -63,5 +63,11 @@
         "Img": "https://images.pexels.com/photos/13094187/pexels-photo-13094187.jpeg?cs=srgb&dl=pexels-fahmi-garna-13094187.jpg&fm=jpg",
         "Title": "Nama Baju",
         "Price": "Rp.40.000"
+    },
+
+    {
+        "Img": "https://images.pexels.com/photos/13094187/pexels-photo-13094187.jpeg?cs=srgb&dl=pexels-fahmi-garna-13094187.jpg&fm=jpg",
+        "Title": "Nama Baju",
+        "Price": "Rp.40.000"
     }
 ]
