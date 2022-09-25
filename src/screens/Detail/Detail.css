@@ -4,9 +4,9 @@
 .main-container{
     margin: 0 auto;
     margin-top: 100px;
-    width: 900px;
+    width: 1000px;
     height: 700px;
-    border: 3px solid #333333;
+    border: 1px solid #333333;
     font-family: 'Poppins' sans-serif;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .detail-img img{
-    width: 400px;
+    width: 500px;
     height: 630px;
 }
 
@@ -31,6 +31,7 @@
 
 .detail-text h1{
     margin-top: 30px;
+    font-weight: bold;
 }
 
 .price{
@@ -57,11 +58,26 @@
     padding: 10px;
 }
 
+.button-top:hover{
+    background-color: #282828;
+    cursor: pointer;
+}
+
 .button-bottom{
     margin-top: 20px;
     font-weight: 700;
     color: #333333;
     background-color: #D9D9D9;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+}
+
+.button-bottom:hover {
+    margin-top: 20px;
+    font-weight: 700;
+    color: #333333;
+    background-color: #ababab;
     width: 200px;
     text-align: center;
     padding: 10px;
