@@ -1,12 +1,12 @@
 import { Routes, Route } from "react-router-dom";
-import { Fragment } from "react";
-import { Store, Home } from "./screens";
+import { Store, Home, Detail } from "./screens";
 
 function App() {
   return (
     <Routes>
-      <Route exact path="/store" element={<Store/>} />
-      <Route path="/" element={<Home/>} />
+      <Route path="/" element={<Home />} />
+      <Route exact path="/store" element={<Store />} />
+      <Route path="/store/detail/:id" element={<Detail />} />
     </Routes>
   );
 }
