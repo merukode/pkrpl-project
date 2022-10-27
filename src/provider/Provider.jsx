@@ -10,8 +10,12 @@ function ProductProvider({ children }) {
     return axios.get(`https://rich-puce-panda-garb.cyclic.app/products`);
   }
 
+  function getSpecificProduct(id){
+    return axios.get(`https://rich-puce-panda-garb.cyclic.app/products/${id}`)
+  }
+
   return (
-    <ProductContext.Provider value={{ getAllProducts }}>
+    <ProductContext.Provider value={{ getAllProducts, getSpecificProduct }}>
       {children}
     </ProductContext.Provider>
   );

@@ -1,0 +1,35 @@
+.navbar {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin: auto;
+    background: white;
+    padding: 10px;
+}
+
+.logo img {
+    width: 100px;
+    height: 40px;
+    background-repeat: no-repeat;
+}
+
+.middle {
+    display: flex;
+    color: black;
+}
+
+.middle p {
+    margin: 15px;
+    color: black;
+}
+
+.middle p:hover{
+    text-decoration: underline;
+}
+
+.right svg{
+    width: 50px;
+}
+

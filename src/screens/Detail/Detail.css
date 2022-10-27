@@ -43,9 +43,16 @@
     margin-top: 30px;
 }
 
-.desc{
-    color:#00000094;
-    margin-top: 30px;
+.sub-img{
+    display: flex;
+}
+
+.sub-child{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    justify-content: space-around;
+    margin: 50px 0px 20px 20px;
 }
 
 .button-top{
@@ -82,3 +89,45 @@
     text-align: center;
     padding: 10px;
 }
+
+.navbar {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin: auto;
+    background: white;
+    padding: 10px;
+}
+
+.logo img {
+    width: 100px;
+    height: 40px;
+    background-repeat: no-repeat;
+}
+
+.middle {
+    display: flex;
+    color: black;
+}
+
+.middle p {
+    margin: 15px;
+    color: black;
+}
+
+.middle p:hover{
+    text-decoration: underline;
+}
+
+
+
+.right img {
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+

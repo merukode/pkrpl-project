@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import Content from "../content.json";
 import Footer from "../Footer/Footer";
 import "./Store.css";
+import Navbar from "../Navbar/Navbar"
 
 const top100Films = [
   { title: "The Shawshank Redemption", year: 1994 },
@@ -53,21 +54,7 @@ export default function Store() {
   return (
     <>
       {/* Navbar */}
-      <div className="navbar">
-        <img src={logo} />
-
-        <div className="middle">
-          <Link to="/">
-            <p>Home</p>
-          </Link>
-          <p>Store</p>
-          <p>All Products</p>
-        </div>
-
-        <div className="right">
-          <img src={profile} />
-        </div>
-      </div>
+      <Navbar/>
 
       {/* End Navbar */}
 
@@ -80,7 +67,6 @@ export default function Store() {
 
       <div className="main-products">
         <div className="top-products">
-          <input type="search" placeholder="Search..." />
           <Autocomplete
             className="filter"
             id="filter-demo"

@@ -1,31 +1,14 @@
 import React from "react";
 import styles from "./Home.module.css";
-import { Link } from "react-router-dom";
 import { ads, logo, gambar, profile, ads2 } from "../img";
 import Sliders from "../Slider/Slider";
 import Footer from "../Footer/Footer";
+import Navbar from "../Navbar/Navbar"
 
 function Home() {
   return (
     <div className={styles.container}>
-      <div className={styles.navbar}>
-        <div className={styles.logo}>
-          <img src={logo} />
-        </div>
-
-        <div className={styles.middle}>
-          <p>About</p>
-          <p>Contact</p>
-          <Link to="/store">
-          <p>Store</p>
-          </Link>
-        </div>
-
-        <div className={styles.right}>
-          <img src={profile} />
-        </div>
-      </div>
-
+      <Navbar/>
       <div className={styles.banner}>
         <div className={styles.banner_content}>
           <h1>Check Out All Products</h1>
