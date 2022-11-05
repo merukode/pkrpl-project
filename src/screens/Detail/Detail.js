@@ -5,11 +5,14 @@ import Navbar from "../Navbar/Navbar"
 import { Link, useParams } from "react-router-dom";
 import { persona, logo, profile } from "../img/index";
 import { CircularProgress } from "@mui/material";
+import { useAtom } from "jotai";
+import { cartAtom } from "../../states/Cart";
 
 function Detail() {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
   const { getSpecificProduct } = useProvider();
+  const [cart, setCart] = useAtom(cartAtom)
   const { id } = useParams();
 
   useEffect(() => {
@@ -29,6 +32,16 @@ function Detail() {
   }, [id]);
 
   console.log(data);
+
+  function addCart (){
+    const cartItem = {
+      img: data.images,
+      title: data.title,
+      price: data.price
+    }
+    setCart(item => [...item,cartItem])
+  }
+  
 
   return (
     <>
@@ -61,7 +74,7 @@ function Detail() {
                 <p>BUY NOW</p>
               </div>
 
-              <div className="button-bottom">
+              <div onClick={addCart} className="button-bottom">
                 <p>ADD TO CART</p>
               </div>
             </div>
