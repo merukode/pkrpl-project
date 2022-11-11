@@ -6,6 +6,7 @@ import {
   Autocomplete,
   createFilterOptions,
   CircularProgress,
+  Stack,
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import Content from "../content.json";
@@ -80,7 +81,9 @@ export default function Store() {
           />
         </div>
         {loading ? (
-          <CircularProgress />
+          <Stack alignItems="center">
+            <CircularProgress />
+          </Stack>
         ) : (
           <div className="products">
             {datas.map((d) => {

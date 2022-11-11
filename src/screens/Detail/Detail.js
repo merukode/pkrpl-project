@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { useProvider } from "../../provider/Provider";
 import "./Detail.css";
-import Navbar from "../Navbar/Navbar"
+import Navbar from "../Navbar/Navbar";
 import { Link, useParams } from "react-router-dom";
 import { persona, logo, profile } from "../img/index";
-import { CircularProgress } from "@mui/material";
+import { CircularProgress, Stack } from "@mui/material";
 import { useAtom } from "jotai";
 import { cartAtom } from "../../states/Cart";
 
 function Detail() {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
+  const [cart, setCart] = useAtom(cartAtom);
+  const [defaultImage,setDefaultImage] = useState()
   const { getSpecificProduct } = useProvider();
-  const [cart, setCart] = useAtom(cartAtom)
   const { id } = useParams();
 
   useEffect(() => {
@@ -27,27 +28,26 @@ function Detail() {
         console.log(e);
       }
     }
-
+    
     getSpecific();
   }, [id]);
+  
 
-  console.log(data);
-
-  function addCart (){
+  function addCart() {
     const cartItem = {
       img: data.images,
       title: data.title,
-      price: data.price
-    }
-    setCart(item => [...item,cartItem])
+      price: data.price,
+      id: data._id,
+    };
+    setCart((item) => [...item, cartItem]);
   }
-  
 
   return (
     <>
-      <Navbar/>
+      <Navbar />
       {loading ? (
-        <div className="main-container">
+        <div className="circular">
           <CircularProgress />
         </div>
       ) : (
@@ -63,11 +63,16 @@ function Detail() {
               <div className="price">
                 <p>RP.{data.price.toLocaleString()}</p>
               </div>
-
               <div className="sub-img">
-                <div className="sub-child"></div>
-                <div className="sub-child"></div>
-                <div className="sub-child"></div>
+                {
+                  data.images.map((i,d) => (
+                <div className="sub-child">
+                  <img
+                    src={data.images[d + 1]}
+                  />
+                </div>
+                  ))
+                }
               </div>
 
               <div className="button-top">

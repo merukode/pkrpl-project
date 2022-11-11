@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import { whiteLogo } from "../img";
-import {Facebook as FacebookIcon, Twitter as TwitterIcon, WhatsApp as WhatsAppIcon, Phone as PhoneIcon } from '@mui/icons-material/';
+import {Facebook as FacebookIcon, Twitter as TwitterIcon, WhatsApp as WhatsAppIcon, Phone as PhoneIcon, Instagram as InstagramIcon } from '@mui/icons-material/';
 
 
 
@@ -50,17 +50,11 @@ export default function () {
           <div class="footer-col">
             <h4>follow us</h4>
             <div class="social-links">
-              <a href="#">
-                <FacebookIcon/>
-              </a>
-              <a href="#">
-                <TwitterIcon/>
-              </a>
-              <a href="#">
+              <a href="https://wa.link/dmhgdh" target="blank">
                 <WhatsAppIcon/>
               </a>
-              <a href="#">
-                <PhoneIcon/>
+              <a href="https://www.instagram.com/nicastore_id/" target="blank">
+                <InstagramIcon/>
               </a>
             </div>
           </div>
