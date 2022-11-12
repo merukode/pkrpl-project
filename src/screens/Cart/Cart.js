@@ -9,14 +9,10 @@ import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 
 function Cart() {
   const [cart, setCart] = useAtom(cartAtom);
-  console.log(cart);
 
   function deleteCart(id) {
-    console.log(id)
-    const res = cart.filter((ct) => ct.id !== id);
-    return res
+    setCart(cart.filter((c) => c.id !== id));
   }
-  
 
   return (
     <>
@@ -29,7 +25,6 @@ function Cart() {
         {cart.length > 0 && cart
           ? cart.map((x) => (
               <>
-                {console.log(x)}
                 <div className="cart">
                   <img src={x.img[0]} />
                   <div className="cart-child">

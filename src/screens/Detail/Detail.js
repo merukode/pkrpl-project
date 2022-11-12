@@ -12,7 +12,7 @@ function Detail() {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
   const [cart, setCart] = useAtom(cartAtom);
-  const [defaultImage,setDefaultImage] = useState()
+  const [defaultImage, setDefaultImage] = useState();
   const { getSpecificProduct } = useProvider();
   const { id } = useParams();
 
@@ -23,15 +23,17 @@ function Detail() {
           data: { product },
         } = await getSpecificProduct(id);
         setData(product);
+        setDefaultImage(product.images[0]);
         setLoading(false);
       } catch (e) {
         console.log(e);
       }
     }
-    
+
     getSpecific();
   }, [id]);
-  
+
+  console.log(defaultImage);
 
   function addCart() {
     const cartItem = {
@@ -54,7 +56,7 @@ function Detail() {
         <div className="main-container">
           <div className="detail">
             <div className="detail-img">
-              <img src={data.images[0]} />
+              <img src={defaultImage} />
             </div>
 
             <div className="detail-text">
@@ -64,15 +66,14 @@ function Detail() {
                 <p>RP.{data.price.toLocaleString()}</p>
               </div>
               <div className="sub-img">
-                {
-                  data.images.map((i,d) => (
-                <div className="sub-child">
-                  <img
-                    src={data.images[d + 1]}
-                  />
-                </div>
-                  ))
-                }
+                {data.images.map((i, d) => (
+                  <div className="sub-child">
+                    <img
+                      src={data.images[d]}
+                      onClick={(e) => setDefaultImage(e.target.currentSrc)}
+                    />
+                  </div>
+                ))}
               </div>
 
               <div className="button-top">
