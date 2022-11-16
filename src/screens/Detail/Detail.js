@@ -77,7 +77,9 @@ function Detail() {
               </div>
 
               <div className="button-top">
-                <p>BUY NOW</p>
+                <a href="https://wa.link/dmhgdh" target="blank">
+                <p >BUY NOW</p>
+              </a>
               </div>
 
               <div onClick={addCart} className="button-bottom">

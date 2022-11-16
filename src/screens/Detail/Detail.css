@@ -67,11 +67,14 @@
 .button-top {
   margin-top: 70px;
   font-weight: 700;
-  color: #ffffff;
   background-color: #393939;
   width: 200px;
   text-align: center;
   padding: 10px;
+}
+
+.button-top a{
+  color: white;
 }
 
 .button-top:hover {
