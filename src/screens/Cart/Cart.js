@@ -1,14 +1,20 @@
 import React from "react";
-import "./Cart.css";
-import Navbar from "../Navbar/Navbar";
-import Footer from "../Footer/Footer";
-import { Link, useParams } from "react-router-dom";
 import { useAtom } from "jotai";
 import { cartAtom } from "../../states/Cart";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import ReactWhatsapp from "react-whatsapp";
+import "./Cart.css";
 
 function Cart() {
   const [cart, setCart] = useAtom(cartAtom);
+
+  const message = `
+    Hai Admin, Saya mau beli ${cart.map(
+      (c) => c.title
+    )}. Harga: Rp.${cart.reduce((a, b) => a.price + b.price)}
+  `;
 
   function deleteCart(id) {
     setCart(cart.filter((c) => c.id !== id));
@@ -17,25 +23,30 @@ function Cart() {
   return (
     <>
       <Navbar />
-
       <div className="center">
-        {/* <h3>Your Cart</h3>
-        <p>Go checkout some items.</p>
-        <button>Continue Shopping</button> */}
-        {cart.length > 0 && cart
-          ? cart.map((x) => (
-              <>
-                <div className="cart">
-                  <img src={x.img[0]} />
-                  <div className="cart-child">
-                    <p>{x.title}</p>
-                    <p>{x.price}</p>
-                  </div>
-                  <DeleteOutlineIcon onClick={() => deleteCart(x.id)} />
+        {cart.length > 0 ? (
+          cart.map((x) => (
+            <>
+              <div className="cart">
+                <img src={x.img[0]} alt={x.title} />
+                <div className="cart-child">
+                  <p>{x.title}</p>
+                  <p>Rp {x.price.toLocaleString("en-US")}</p>
                 </div>
-              </>
-            ))
-          : null}
+                <DeleteOutlineIcon onClick={() => deleteCart(x.id)} />
+              </div>
+            </>
+          ))
+        ) : (
+          <h1>Please add some products first!</h1>
+        )}
+        {cart && (
+          <h3>
+            Total : Rp{" "}
+            {cart.reduce((a, b) => a.price + b.price).toLocaleString("en-US")}
+          </h3>
+        )}
+        <ReactWhatsapp number="+6285782231103" message={message} />
       </div>
 
       <Footer />
