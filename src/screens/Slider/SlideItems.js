@@ -69,13 +69,13 @@ export default function SlideItems() {
 
   return (
     <div className="main-box">
-      <h2> Multiple items </h2>
+      <h2> Our Items </h2>
       <Slider {...settings}>
         {item && item.length > 0 ? item?.map((item, index) => {
           return (
             <div className="box" key={index}>
               <img src={item?.images[0]} />
-              <p>deskripsi</p>
+              <p>{item?.title}</p>
             </div>
           );
         }): null}
