@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;500;600;700&display=swap');
 * {
     margin: 0px;
     padding: 0px;
@@ -63,21 +62,21 @@ body{
     text-align: center;
     color: white;
     top: 40%;
-
     left: 50%;
-
     transform: translate(-50%, -50%);
-
     margin: 0;
 }
 
 .banner_content p{
-    margin-top: 30px;
+    margin-top: 5px;
     color: white;
+    font-family: 'Poppins';
 }
 
 .banner_content h1{
     color: white;
+    font-family: 'Playfair Display';
+    font-size: 5em;
 }
 
 .banner_btn{

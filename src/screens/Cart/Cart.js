@@ -10,11 +10,11 @@ import "./Cart.css";
 function Cart() {
   const [cart, setCart] = useAtom(cartAtom);
 
-  const message = `
-    Hai Admin, Saya mau beli ${cart.map(
-      (c) => c.title
-    )}. Harga: Rp.${cart.reduce((a, b) => a.price + b.price)}
-  `;
+  // const message = `
+  //   Hai Admin, Saya mau beli ${cart.map(
+  //     (c) => c.title
+  //   )}. Harga: Rp.${cart.reduce((a, b) => a.price + b.price)}
+  // `;
 
   function deleteCart(id) {
     setCart(cart.filter((c) => c.id !== id));
@@ -40,13 +40,13 @@ function Cart() {
         ) : (
           <h1>Please add some products first!</h1>
         )}
-        {cart && (
+        {/* {cart && (
           <h3>
             Total : Rp{" "}
             {cart.reduce((a, b) => a.price + b.price).toLocaleString("en-US")}
           </h3>
         )}
-        <ReactWhatsapp number="+6285782231103" message={message} />
+        <ReactWhatsapp number="+6285782231103" message={message} /> */}
       </div>
 
       <Footer />

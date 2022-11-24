@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Home.module.css";
 import { ads, logo, gambar, profile, ads2 } from "../img";
-import Sliders from "../Slider/Slider";
+import SlideItems from "../Slider/SlideItems";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar"
 
@@ -11,11 +11,9 @@ function Home() {
       <Navbar/>
       <div className={styles.banner}>
         <div className={styles.banner_content}>
-          <h1>Check Out All Products</h1>
+          <h1>Nicastore</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam
+          Low-cost, high-quality Thrift.
           </p>
           <button className={styles.banner_btn}>More</button>
         </div>
@@ -32,9 +30,11 @@ function Home() {
         </div>
       </div>
 
-      <Sliders />
-      <Sliders />
+      <div className={styles.responsive}>
+      <SlideItems />
+      <SlideItems />
       <Footer />
+      </div>
     </div>
   );
 }

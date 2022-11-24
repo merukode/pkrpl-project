@@ -71,13 +71,14 @@
   width: 200px;
   text-align: center;
   padding: 10px;
+  cursor: pointer;
 }
 
 .button-top a{
   color: white;
 }
-
 .button-top:hover {
+
   background-color: #282828;
   cursor: pointer;
 }
@@ -90,6 +91,7 @@
   width: 200px;
   text-align: center;
   padding: 10px;
+  cursor: pointer;
 }
 
 .button-bottom:hover {
@@ -100,6 +102,12 @@
   width: 200px;
   text-align: center;
   padding: 10px;
+  cursor: pointer;
+
+}
+
+.button-bottom:checked{
+  background-color: #302323;
 }
 
 .navbar {
