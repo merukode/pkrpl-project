@@ -33,8 +33,6 @@ function Detail() {
     getSpecific();
   }, [id]);
 
-  console.log(defaultImage);
-
   function addCart() {
     const cartItem = {
       img: data.images,
@@ -78,8 +76,8 @@ function Detail() {
 
               <div className="button-top">
                 <a href="https://wa.link/dmhgdh" target="blank">
-                <p >BUY NOW</p>
-              </a>
+                  <p>BUY NOW</p>
+                </a>
               </div>
 
               <div onClick={addCart} className="button-bottom">
