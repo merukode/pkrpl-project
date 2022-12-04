@@ -9,13 +9,17 @@ import "./Cart.css";
 
 function Cart() {
   const [cart, setCart] = useAtom(cartAtom);
-  const initialValue = 1;
 
   function deleteCart(id) {
     setCart(cart.filter((c) => c.id !== id));
   }
 
-  console.log(cart.length === 1);
+  const price =
+    cart.length === 0 ? 0 : cart.map((c) => c.price).reduce((a, b) => a + b); //.reduce((a, b) => a.price + b.price);
+  const message = `Hai Admin, Saya mau beli ${cart.map(
+    (c) => c.title
+  )}. Jadi berapa ya?`;
+  console.log(message);
 
   return (
     <>
@@ -39,24 +43,8 @@ function Cart() {
         )}
         {cart && (
           <>
-            <h3>
-              Total : Rp{" "}
-              {cart.length === 0
-                ? "0"
-                : cart.length === 1
-                ? cart[0].price.toLocaleString("en-US")
-                : cart
-                    .reduce((a, b) => a.price + b.price)
-                    .toLocaleString("en-US")}
-            </h3>
-            <ReactWhatsapp
-              number="+6285782231103"
-              message={`
-      Hai Admin, Saya mau beli ${
-        cart.length === 0 ? 0 : cart.map((c) => c.title)
-      }. Jadi berapa ya?
-    `}
-            />
+            <h3>Total : Rp{price.toLocaleString("en-US")}</h3>
+            <ReactWhatsapp number="+6285782231103" message={message} />
           </>
         )}
       </div>
@@ -65,46 +53,4 @@ function Cart() {
   );
 }
 
-// <>
-//   <Navbar />
-//   <div className="center">
-//     <>
-//     {cart.length > 0 ? (
-//       cart.map((x) => (
-//           <div className="cart">
-//             <img src={x.img[0]} alt={x.title} />
-//             <div className="cart-child">
-//               <p>{x.title}</p>
-//               <p>Rp {x.price.toLocaleString("en-US")}</p>
-//             </div>
-//             <DeleteOutlineIcon onClick={() => deleteCart(x.id)} />
-//           </div>
-//       ))
-//     ) : (
-//       <h1>Please add some products first!</h1>
-//     )}
-//     {cart && (
-//         <h3>
-//           Total : Rp{" "}
-//           {cart.length === 0
-//             ? "0"
-//             : cart
-//                 .reduce((a, b) => a.price + b.price)
-//                 .toLocaleString("en-US")}
-//         </h3>
-//     )}
-//   </div>
-//   <Footer />
-// </>
-
 export default Cart;
-{
-  /* <ReactWhatsapp
-              number="+6285782231103"
-              message={`
-    Hai Admin, Saya mau beli ${
-      cart.length === 0 ? 0 : cart.map((c) => c.title)
-    }. Jadi berapa ya?
-  `}
-            /> */
-}
