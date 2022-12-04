@@ -70,6 +70,7 @@ export default function SlideItems() {
   return (
     <div className="main-box">
       <h2> Our Items </h2>
+      <p>Find our best items here</p>
       <Slider {...settings}>
         {item && item.length > 0 ? item?.map((item, index) => {
           return (

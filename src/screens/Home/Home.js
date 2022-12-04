@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./Home.module.css";
-import { ads, logo, gambar, profile, ads2 } from "../img";
+import { sale, ads, logo, gambar, profile, ads2 } from "../img";
 import SlideItems from "../Slider/SlideItems";
+import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar"
 
@@ -15,18 +16,19 @@ function Home() {
           <p>
           Low-cost, high-quality Thrift.
           </p>
-          <button className={styles.banner_btn}>More</button>
+          <Link to="/store">
+          <button  className={styles.banner_btn}>More</button>
+          </Link>
         </div>
       </div>
 
       <div className={styles.ads}>
         <div className={styles.ads_head}>
-          <h1>Judul</h1>
-          <p>This is an ads page</p>
+          <h1>Promo</h1>
+          <p>Best Offer Today</p>
         </div>
         <div className={styles.ads_img}>
-          <img src={ads} />
-          <img src={ads2} />
+          <img src={sale} />
         </div>
       </div>
 

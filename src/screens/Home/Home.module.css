@@ -85,13 +85,14 @@ body{
     border-radius: 10px;
     font-size: 1.2em;
     font-weight: bold;
-    background-color: black;
+    background-color: rgb(255, 188, 63);
     color: white;
     border: none;
+    cursor: pointer;
 }
 
 .banner_btn:hover{
-    background-color:  rgb(51, 164, 213);
+    background-color:  #FF8A65;
 }
 
 .ads_head{
@@ -101,14 +102,13 @@ body{
 
 .ads_img{
     display: flex;
-    max-width: 800px;
-    margin: auto;
-    background: white;
-    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .ads_img img{
-    width: 50%;
+    width: 800px;
 }
 
 .carousel_head{
