@@ -15,7 +15,7 @@ function Cart() {
   }
 
   const price =
-    cart.length === 0 ? 0 : cart.map((c) => c.price).reduce((a, b) => a + b); //.reduce((a, b) => a.price + b.price);
+    cart.length === 0 ? 0 : cart.map((c) => c.price).reduce((a, b) => a + b);
   const message = `Hai Admin, Saya mau beli ${cart.map(
     (c) => c.title
   )}. Jadi berapa ya?`;
