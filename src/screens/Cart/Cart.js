@@ -19,31 +19,39 @@ function Cart() {
   const message = `Hai Admin, Saya mau beli ${cart.map(
     (c) => c.title
   )}. Jadi berapa ya?`;
+  console.log(message);
 
   return (
     <>
       <Navbar />
       <div className="center">
         {cart.length > 0 ? (
-          cart.map((x) => (
-            <>
+          <div className="outer">
+          {cart.map((x) => (
+            <div>
               <div className="cart">
-                <img src={x.img[0]} alt={x.title} />
                 <div className="cart-child">
-                  <p>{x.title}</p>
+                  <img src={x.img[0]} alt={x.title} />
+                  <div className="cart-text">
+                  <b>{x.title}</b>
                   <p>Rp {x.price.toLocaleString("en-US")}</p>
+                  </div>
                 </div>
-                <DeleteOutlineIcon onClick={() => deleteCart(x.id)} />
+                <DeleteOutlineIcon className="delete-icon" onClick={() => deleteCart(x.id)} />
               </div>
-            </>
-          ))
+            </div>
+          ))}
+          </div>
         ) : (
           <h1>Please add some products first!</h1>
         )}
         {cart && (
           <>
             <h3>Total : Rp{price.toLocaleString("en-US")}</h3>
-            <ReactWhatsapp number="+6281393973121" message={message} />
+
+            <ReactWhatsapp className="react-wa" number="+6281393973121" message={message}>
+              <p>Pesan</p>
+            </ReactWhatsapp>
           </>
         )}
       </div>
