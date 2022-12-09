@@ -8,32 +8,41 @@
 }
 
 .center{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    height: auto;
-    font-size: 1.5em;
+    text-align: center;
 }
 
-.center h3, p, button{
-    margin: 10px;
+.outer{
+    display: flex;
+    width: auto;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .cart{
     border: 1px solid black;
-    border-radius: 15px;
-    width: 90%;
-    display: flex;
-    margin: 20px;
+    width: auto;
+    margin: 14px;
+    border-radius: 12px;
+    box-shadow: 10px 10px 5px -7px rgba(0,0,0,0.18);
+-webkit-box-shadow: 10px 10px 5px -7px rgba(0,0,0,0.18);
+-moz-box-shadow: 10px 10px 5px -7px rgba(0,0,0,0.18);
 }
 
-.cart img{
-    width: 150px;
+.cart-child img{
+    width: 200px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
 }
 
-.cart-child{
+.delete-icon{
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+.react-wa{
+    border-radius: 14px;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 button{
